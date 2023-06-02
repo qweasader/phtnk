@@ -31,7 +31,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git show HEAD~1:online-valid.csv.gz > /dev/null 2>&1
-          if [ $? -ne 0 ];
+          if [[ $? -ne 0 ]]
           then
             wget http://data.phishtank.com/data/3e93925c8e73988103061cea4c6f73326626c43cd16a594695752f8ab0e239b7/online-valid.csv.gz
           else
